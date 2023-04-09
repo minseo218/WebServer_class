@@ -1,4 +1,4 @@
-﻿										<%@ page contentType="text/html; charset=utf-8"%>
+﻿<%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.util.Date"%>
 <html>
 <head>
@@ -7,20 +7,21 @@
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
-	<%!String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
-	String tagline = "Welcome to Web Market!";%>
-	<div class="jumbotron">
-		<div class="container">
+	<%!String greeting = "Welcome to minstar coffee shop :)";
+	String tagline = "This is welcome page.";%>
+	<div class="jumbotron text-center">
+		<div class="container text-center">
 			<h1 class="display-3">
 				<%=greeting%>
 			</h1>
 		</div>
-	</div>	
+		</div>	
 	<div class="container">
-		<div class="text-center">
-			<h3>
+		<div class="text-center border">
+			<br><br>
+			<h2 >
 				<%=tagline%>
-			</h3>
+			</h2><br>
 			<%
 				Date day = new java.util.Date();
 				String am_pm;
@@ -37,8 +38,8 @@
 				out.println("현재 접속  시각: " + CT + "\n");
 			%>
 		</div>
-		<hr>
 	</div>	
+	<hr>
 	<%@ include file="footer.jsp"%>
 </body>
 </html>
